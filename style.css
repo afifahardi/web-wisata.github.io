@@ -1,0 +1,122 @@
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+  .carousel-inner {
+    max-height: 550px; /* Membatasi tinggi maksimum carousel */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang melebihi kontainer */
+  }
+
+  .carousel-inner img {
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    height: 100%; /* Mengatur tinggi gambar */
+    width: 100%; /* Mengatur lebar gambar */
+  }
+
+  .play-button {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 100px; 
+    color: red; 
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%; 
+    padding: 3px 20px;
+    transition: background 0.3s, color 0.3s; /* Tambahkan transisi */
+  }
+
+  /* efek hover */
+  .play-button:hover {
+    background: #FF0000; /* Warna latar belakang saat hover */
+    color: #FFFFFF; /* Warna teks saat hover */
+  }
+
+  /* Media query untuk ukuran layar kecil */
+  @media (max-width: 720px) {
+    .play-button {
+        top: 60%;
+        left: 50%;
+      font-size: 30px; /* Ukuran font lebih kecil untuk mobile */
+      padding: 3px 20px; /* Padding lebih kecil untuk mobile */
+      font-size: 50px
+    }
+  }
+
+  .container-costume {
+    display: flex;
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center;     /* Memusatkan secara vertikal */
+    height: 100vh;           /* Mengatur tinggi container sama dengan tinggi viewport */
+    overflow-x: hidden;      /* Menghilangkan overflow horizontal pada container */
+  }
+
+.wrapper{
+    width: 80%;
+    max-width: 1100px;
+    position: relative;
+    
+}
+
+.wrapper i{
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background: #3CB371;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child{
+    left: -23px;
+}
+
+.wrapper i:last-child{
+    right: -23px;
+}
+
+.costum-carousel{
+    overflow: hidden;
+}
+
+.wrapper .costum-carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+}
+ 
+.costum-carousel img{
+    height: 500px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+
+.costum-carousel img:first-child{
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+    .costum-carousel img{
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .costum-carousel img{
+        width: 100%;
+    }
+}
+  
+  
+
+</style>
