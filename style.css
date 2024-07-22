@@ -14,6 +14,11 @@
     width: 100%; /* Mengatur lebar gambar */
   }
 
+  .card-img-top{
+    height: 200px;
+    object-fit: cover;
+  }
+
   .play-button {
     position: absolute; 
     top: 50%; 
@@ -44,12 +49,59 @@
     }
   }
 
+  /*card paket wisata*/
+  .card-wisata {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk transformasi dan bayangan */
+    border: none; /* Menghilangkan border default */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan dasar untuk efek 3D */
+  }
+  
+  /* Efek hover pada card */
+  .card-wisata:hover {
+    transform: translateY(-10px); /* Mengangkat card sedikit saat hover */
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover untuk efek kedalaman */
+  }
+  
+  /* Efek klik pada card (opsional) */
+  .card-wisata:active {
+    transform: translateY(-5px); /* Mengurangi sedikit posisi saat card diklik */
+  }
+
+  .btn-costum {
+    background: #3CB371 !important; /* Warna latar belakang */
+    color: white !important; /* Warna teks */
+    border: none; /* Menghilangkan border default */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transisi untuk perubahan */
+  }
+  
+  /* Efek hover */
+  .btn-costum:hover {
+    background: #2e8b57 !important; /* Warna latar belakang saat hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+    transform: translateY(-3px); /* Mengangkat tombol sedikit */
+  }
+  
+  /* Efek klik */
+  .btn-costum:active {
+    transform: translateY(1px); /* Menurunkan tombol sedikit saat diklik */
+  }
+  
+  
+
+  .judul-destinasi{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
   .container-costume {
     display: flex;
     justify-content: center; /* Memusatkan secara horizontal */
     align-items: center;     /* Memusatkan secara vertikal */
-    height: 100vh;           /* Mengatur tinggi container sama dengan tinggi viewport */
+   /* height: 100vh;*/           /* Mengatur tinggi container sama dengan tinggi viewport */
     overflow-x: hidden;      /* Menghilangkan overflow horizontal pada container */
+    margin-bottom: 2rem;
   }
 
 .wrapper{
@@ -76,43 +128,58 @@
 
 .wrapper i:first-child{
     left: -23px;
+    display: none;
 }
 
 .wrapper i:last-child{
     right: -23px;
 }
 
-.costum-carousel{
+.costume-carousel{
     overflow: hidden;
 }
 
-.wrapper .costum-carousel{
+.wrapper .costume-carousel{
     font-size: 0px;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+.costume-carousel .dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.costume-carousel img{
+  pointer-events: none;
+  user-select: none; /* Menghindari seleksi teks */
+  -webkit-user-drag: none;
 }
  
-.costum-carousel img{
+.costume-carousel img{
+  pointer-events: none;
+  object-fit: cover;
     height: 500px;
     object-fit: cover;
-    margin-left: 14px;
+    margin-left: 15px;
     width: calc(100% / 3);
 }
 
-.costum-carousel img:first-child{
+.costume-carousel img:first-child{
     margin-left: 0px;
 }
 
 @media screen and (max-width: 900px) {
-    .costum-carousel img{
+    .costume-carousel img{
         width: calc(100% / 2);
     }
 }
 
 @media screen and (max-width: 550px) {
-    .costum-carousel img{
+    .costume-carousel img{
         width: 100%;
     }
 }
