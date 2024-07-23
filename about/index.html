@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: #F8F8FF">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
-          <img src="../assets/logo.png" alt="Desa-Wisata-Pulesari" width="130px" height="54">
+          <img src="../assets/logo.png" alt="Desa-Wisata-Pulesari" width="80px" height="30">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav " style="font-family: Georgia, 'Times New Roman', Times, serif;">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="../index.html">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="../about/index.html">Tentang Kami</a>
@@ -42,9 +42,9 @@
                 Other
               </a>
               <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../obyek-wisata/index.html">Obyek Wisata</a></li>
+              <li><a class="dropdown-item" href="../obyek-wisata/index.html">Objek Wisata</a></li>
                 <li><a class="dropdown-item" href="../fasilitas/index.html">Fasilitas</a></li>
-                <li><a class="dropdown-item" href="../gallery/index.html">Gallery</a></li>
+                <li><a class="dropdown-item" href="../gallery/index.html">Galeri</a></li>
               </ul>
             </li>
           </ul>
@@ -54,7 +54,7 @@
   <!-- END NAVBAR -->
 
   <!-- CAROUSEL -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -62,13 +62,11 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-
         <div style="position: relative; cursor: pointer;" id="videoPlaceholder">
       <img src="https://images.unsplash.com/photo-1579804152190-ba7a74a8cc3c?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 img-fluid" alt="slide1"style="height: auto; max-height: 550px;">
-      <div class="play-button"> &#9658; </div>
+      <div class="play-button" id="playButton"> &#9658; </div>
       <div class="carousel-caption d-none d-md-block fixed">
     </div>
-
       </div>
     </div>
     <div class="carousel-item">
@@ -103,7 +101,7 @@
              <div class="row" style="margin: 30px">
                  <div class="col-md-3 col-sm-6 col-xs-12">
                      <div class="aboutus">
-                         <h2 class="aboutus-title">Tentang Kami</h2>
+                         <h2 class="aboutus-title card-title fw-bold">Tentang Kami</h2> <br>
                          <p class="aboutus-text">Di kaki perbukitan yang hijau dan diapit oleh aliran sungai yang jernih, terletak Desa Wisata Pulesari, sebuah surga tersembunyi yang menawarkan keindahan alam yang memukau dan kekayaan budaya yang mendalam. Desa Wisata Pulesari adalah destinasi wisata yang sempurna bagi Anda yang ingin merasakan kesejukan udara pegunungan, menjelajahi keindahan alam, serta mendalami kearifan lokal yang autentik.</p>
                          <!-- <p class="aboutus-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem</p> -->
                          <!-- <a class="aboutus-more" href="#">read more</a> -->
@@ -122,8 +120,8 @@
                                      <span class="glyphicon glyphicon-cog icon"></span>
                                  </div>
                                  <div class="feature-content">
-                                     <h4>Visi Kami</h4>
-                                     <p>Menciptakan sebuah wujud Desa Wisata Pulesari yang bersih, aman, nyaman, tentram, dinamis serta seni dan berbudaya religius yang berkualitas untuk menjadikan Desa Wisata Edukasi masyarakat tradisional.</p>
+                                     <h4 class="card-title fw-bold">Visi Kami</h4>
+                                     <p>Menciptakan sebuah wujud Desa Wisata Pulesari yang bersih, aman, nyaman, tentram, dinamis serta seni dan berbudaya religius yang berkualitas untuk menjadikan Desa Wisata Edukasi masyarakat tradisional.</p><br>
                                  </div>
                              </div>
                          </div>
@@ -133,7 +131,7 @@
                                      <span class="glyphicon glyphicon-cog icon"></span>
                                  </div>
                                  <div class="feature-content">
-                                     <h4>Misi Kami</h4>
+                                     <h4 class="card-title fw-bold">Misi Kami</h4>
                                      <dl>
                                       <dt>Melestarikan Keindahan Alam</dt>
                                       <dd>Kami berkomitmen untuk menjaga dan melestarikan keindahan alam Desa Pulesari. Melalui program-program konservasi dan edukasi lingkungan, kami berusaha menjaga keseimbangan ekosistem alam desa kami.</dd>
@@ -151,7 +149,7 @@
                                      <span class="glyphicon glyphicon-cog icon"></span>
                                  </div>
                                  <div class="feature-content">
-                                     <h4>Hubungi Kami</h4>
+                                     <h4 class="card-title fw-bold">Hubungi Kami</h4>
                                      <p>Jika Anda memiliki pertanyaan atau ingin melakukan reservasi, jangan ragu untuk menghubungi kami melalui kontak berikut:</p>
                                      <ul>
                                       <li><strong>Telepon/WA:</strong> 0812-3456-7890</li>
@@ -294,26 +292,24 @@
     </footer>
    <!-- END FOOTER -->
 
+   <!-- SCRIPT CAROUSEL VIDEO -->
    <script>
-    document.getElementById('videoPlaceholder').addEventListener('click', function() {
-      this.innerHTML = '<iframe src="https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1" id="youtubeVideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 550px;"></iframe>';
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+const playButton = document.getElementById('playButton');
+const videoPlaceholder = document.getElementById('videoPlaceholder');
 
-  
-    document.getElementById('playButton').addEventListener('click', function() {
-        var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'), {
-          interval: false // Matikan otomatis slide
-        });
-        var videoPlaceholder = document.getElementById('videoPlaceholder');
-        videoPlaceholder.innerHTML = '<iframe id="youtubeVideo" src="https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 550px;"></iframe>';
-        carousel.pause(); // Pause carousel saat video diputar
+const videoURL = 'https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1'; // Tambahkan autoplay=1 agar video langsung diputar
 
-        var videoFrame = document.getElementById('youtubeVideo');
-        videoFrame.addEventListener('ended', function() {
-          carousel.cycle(); // Lanjutkan carousel setelah video selesai
-        });
-      });
-  </script>
+playButton.addEventListener('click', () => {
+  // Ganti gambar dengan video
+  videoPlaceholder.innerHTML = `
+    <iframe width="100%" height="550" src="${videoURL}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  `;
+});
+});
+
+  </script>  
+  <!-- SCRIPT CAROUSEL VIDEO -->
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

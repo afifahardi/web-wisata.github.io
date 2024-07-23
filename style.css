@@ -1,59 +1,60 @@
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 
-  .carousel-inner {
-    max-height: 550px; /* Membatasi tinggi maksimum carousel */
-    overflow: hidden; /* Menyembunyikan bagian gambar yang melebihi kontainer */
-  }
+.carousel-inner {
+  max-height: 550px; /* Membatasi tinggi maksimum carousel */
+  overflow: hidden; /* Menyembunyikan bagian gambar yang melebihi kontainer */
+}
 
-  .carousel-inner img {
-    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
-    height: 100%; /* Mengatur tinggi gambar */
-    width: 100%; /* Mengatur lebar gambar */
-  }
+.carousel-inner img  {
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  height: 100%; /* Mengatur tinggi gambar */
+  width: 100%; /* Mengatur lebar gambar */
+}
 
-  .card-img-top{
-    height: 200px;
-    object-fit: cover;
-  }
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
 
+.play-button {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 100px; 
+  color: red; 
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 50%; 
+  padding: 3px 20px;
+  transition: background 0.3s, color 0.3s; /* Tambahkan transisi */
+}
+
+/* efek hover */
+.play-button:hover {
+  background: #FF0000; /* Warna latar belakang saat hover */
+  color: #FFFFFF; /* Warna teks saat hover */
+}
+
+/* Media query untuk ukuran layar kecil */
+@media (max-width: 720px) {
   .play-button {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    font-size: 100px; 
-    color: red; 
-    background: rgba(0, 0, 0, 0.5); 
-    border-radius: 50%; 
-    padding: 3px 20px;
-    transition: background 0.3s, color 0.3s; /* Tambahkan transisi */
+      top: 60%;
+      left: 50%;
+    font-size: 30px; /* Ukuran font lebih kecil untuk mobile */
+    padding: 3px 20px; /* Padding lebih kecil untuk mobile */
+    font-size: 50px
   }
+}
 
-  /* efek hover */
-  .play-button:hover {
-    background: #FF0000; /* Warna latar belakang saat hover */
-    color: #FFFFFF; /* Warna teks saat hover */
-  }
-
-  /* Media query untuk ukuran layar kecil */
-  @media (max-width: 720px) {
-    .play-button {
-        top: 60%;
-        left: 50%;
-      font-size: 30px; /* Ukuran font lebih kecil untuk mobile */
-      padding: 3px 20px; /* Padding lebih kecil untuk mobile */
-      font-size: 50px
-    }
-  }
 
   /*card paket wisata*/
   .card-wisata {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk transformasi dan bayangan */
     border: none; /* Menghilangkan border default */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan dasar untuk efek 3D */
+    min-height: 555px; /* Set minimum height */
   }
   
   /* Efek hover pada card */
@@ -68,12 +69,34 @@
   }
 
   .btn-costum {
+    margin-bottom: 1rem;
     background: #3CB371 !important; /* Warna latar belakang */
     color: white !important; /* Warna teks */
     border: none; /* Menghilangkan border default */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan */
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transisi untuk perubahan */
   }
+
+
+  .card-price {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card-body li{
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.price-value {
+  font-size: 1.4rem; /* Ukuran font lebih besar untuk nilai harga */
+}
+
   
   /* Efek hover */
   .btn-costum:hover {
@@ -168,6 +191,172 @@
     width: calc(100% / 3);
 }
 
+/* FASILITAS */
+.service-card {
+  transition: transform 0.3s;
+  min-height: 300px; /* Set minimum height */
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-icon {
+  font-size: 50px;
+  color: #3CB371;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+  /* END FASILITAS */
+
+  /* FORM PEMESANAN */
+
+/* Gaya Formulir */
+.form-container {
+  padding: 20px;
+  background-color: #ffffff; /* Warna latar belakang putih bersih */
+  border-radius: 15px; /* Sudut yang lebih membulat */
+  box-shadow: 
+  12px 12px 20px rgba(0, 0, 0, 0.3), /* Shadow utama yang lebih kontras */
+  -6px -6px 15px rgba(255, 255, 255, 0.2); /* Shadow highlight tambahan */
+  margin-top: 40px;
+  max-width: 90%; /* Lebar maksimum responsif */
+  margin-left: auto; /* Centering secara horizontal */
+  margin-right: auto; /* Centering secara horizontal */
+}
+
+.form-group label{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Header Formulir */
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* Ukuran font responsif */
+  color: #333; /* Warna font yang gelap untuk keterbacaan */
+}
+
+.form-header p {
+  color: #6c757d; /* Warna teks sekunder */
+  font-size: 1rem; /* Ukuran font responsif */
+}
+
+/* Gaya Form Row */
+.form-row {
+  display: flex;
+  flex-wrap: wrap; /* Untuk memungkinkan elemen baris menjadi beberapa baris jika diperlukan */
+  gap: 20px; /* Spasi antara elemen dalam baris */
+  margin-bottom: 20px;
+}
+
+/* Gaya Form Group */
+.form-group {
+  flex: 1; /* Membuat elemen menyesuaikan lebar secara merata */
+  min-width: 200px; /* Lebar minimum untuk form-group */
+}
+
+/* Gaya Input dan Select */
+.form-control, .form-select {
+  border: 1px solid #ced4da; /* Border abu-abu */
+  border-radius: 25px; /* Membuat elemen input oval */
+  box-shadow: none; /* Hilangkan shadow bawaan dari browser */
+  padding: 12px 15px; /* Padding tambahan */
+  font-size: 1rem; /* Ukuran font yang nyaman dibaca */
+  transition: border-color 0.3s ease; /* Efek transisi border saat focus */
+  width: 100%; /* Membuat elemen input mengisi lebar kontainer */
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #3CB371; /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
+  box-shadow: 0 0 5px rgba(8, 102, 47, 0.5); /* Shadow saat fokus */
+}
+
+/* Gaya Button */
+.btn-custom {
+  background-color: #3CB371;
+  color: white;
+  border: none; /* Hapus border default */
+  border-radius: 25px; /* Sudut tombol membulat */
+  padding: 12px 20px; /* Padding tombol */
+  font-size: 1rem; /* Ukuran font tombol */
+  transition: background-color 0.3s ease; /* Efek transisi */
+  width: 100%; /* Membuat tombol mengisi lebar kontainer */
+}
+
+.btn-custom:hover {
+  background-color: #26794b;
+  color: #dadfe4;
+}
+
+/* Gaya untuk textarea */
+.form-control[rows] {
+  resize: vertical; /* Izinkan resize hanya vertikal */
+  overflow: hidden; /* Sembunyikan overflow horizontal */
+  border-radius: 25px; /* Membuat textarea oval */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+  .form-container {
+      padding: 15px;
+  }
+
+  .form-header h2 {
+      font-size: 1.25rem; /* Ukuran font lebih kecil untuk layar kecil */
+  }
+
+  .form-header p {
+      font-size: 0.9rem; /* Ukuran font lebih kecil untuk layar kecil */
+  }
+
+  .form-control, .form-select {
+      padding: 10px 12px; /* Padding lebih kecil pada layar kecil */
+  }
+
+  .btn-custom {
+      padding: 10px 15px; /* Padding tombol lebih kecil pada layar kecil */
+      font-size: 0.9rem; /* Ukuran font tombol lebih kecil pada layar kecil */
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .form-header h2 {
+      font-size: 1rem; /* Ukuran font lebih kecil pada layar sangat kecil */
+  }
+
+  .form-header p {
+      font-size: 0.8rem; /* Ukuran font lebih kecil pada layar sangat kecil */
+  }
+
+  .form-control, .form-select {
+      padding: 8px 10px; /* Padding lebih kecil pada layar sangat kecil */
+  }
+
+  .btn-custom {
+      padding: 8px 12px; /* Padding tombol lebih kecil pada layar sangat kecil */
+      font-size: 0.8rem; /* Ukuran font tombol lebih kecil pada layar sangat kecil */
+  }
+}
+
+
+
+  /* END FORM PEMESANAN */
 .costume-carousel img:first-child{
     margin-left: 0px;
 }

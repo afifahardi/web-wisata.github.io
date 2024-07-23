@@ -21,10 +21,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav " style="font-family: Georgia, 'Times New Roman', Times, serif;">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="../index.html">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about/index.html">About</a>
+              <a class="nav-link" href="../about/index.html">Tentang Kami</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="../paket-wisata/index.html">Paket Wisata</a>
@@ -37,9 +37,9 @@
                 Other
               </a>
               <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../obyek-wisata/index.html">Obyek Wisata</a></li>
+              <li><a class="dropdown-item" href="../obyek-wisata/index.html">Objek Wisata</a></li>
                 <li><a class="dropdown-item" href="../fasilitas/index.html">Fasilitas</a></li>
-                <li><a class="dropdown-item" href="../gallery/index.html">Gallery</a></li>
+                <li><a class="dropdown-item" href="../gallery/index.html">Galeri</a></li>
               </ul>
             </li>
           </ul>
@@ -49,7 +49,7 @@
   <!-- END NAVBAR -->
 
   <!-- CAROUSEL -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -57,13 +57,11 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-
         <div style="position: relative; cursor: pointer;" id="videoPlaceholder">
       <img src="https://images.unsplash.com/photo-1579804152190-ba7a74a8cc3c?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 img-fluid" alt="slide1"style="height: auto; max-height: 550px;">
-      <div class="play-button"> &#9658; </div>
+      <div class="play-button" id="playButton"> &#9658; </div>
       <div class="carousel-caption d-none d-md-block fixed">
     </div>
-
       </div>
     </div>
     <div class="carousel-item">
@@ -92,7 +90,7 @@
   <div class="container overflow-hidden text-center mt-5" >
     <div class="row">
       <div class="col-11" >
-        <h3 style="text-align: center;"> PAKET WISATA </h3>
+        <h3 class="card-title fw-bold" style="text-align: center; padding-left: 5rem;"> PAKET WISATA </h3>
       </div>
   </div>
 
@@ -102,8 +100,16 @@
         <img src="../assets/slick1.png" class="card-img-top" alt="card1">
         <div class="card-body">
           <h5 class="card-title" id="booking1">River Serenity Park</h5>
-          <p class="card-text">Nikmati ketenangan dan keindahan sungai dengan aktivitas seperti berperahu, memancing, atau sekadar bersantai di tepiannya.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses penuh ke River Serenity Park</li>
+            <li>Sewa perahu</li>
+            <li>Peralatan memancing</li>
+            <li>Akses ke area bersantai di tepi sungai</li>
+            <li>Fasilitas seperti meja piknik dan tempat duduk di tepi sungai</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp150.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -112,8 +118,16 @@
         <img src="../assets/slick2.png" class="card-img-top" alt="card2">
         <div class="card-body">
           <h5 class="card-title">Bloom Haven Garden</h5>
-          <p class="card-text">Taman yang penuh warna dengan berbagai jenis bunga yang mekar sepanjang tahun, ideal untuk berjalan-jalan santai dan menikmati keindahan alam.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses penuh ke Bloom Haven Garden</li>
+            <li>Peta taman dan informasi tentang berbagai jenis bunga</li>
+            <li>Fasilitas berjalan-jalan santai di taman</li>
+            <li>Akses ke area bersantai di tepi sungai</li>
+            <li>Area foto yang indah dan spot favorit</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp100.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -122,8 +136,15 @@
         <img src="../assets/slick3.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Summit Vista Peak</h5>
-          <p class="card-text">Tempat puncak gunung yang menawarkan pemandangan spektakuler dan jalur pendakian yang menantang, memberikan pengalaman petualangan dan ketenangan di ketinggian.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses penuh ke jalur pendakian dan puncak gunung</li>
+            <li>Pemandangan spektakuler dari puncak</li>
+            <li>Peta jalur pendakian dan informasi tentang rute</li>
+            <li>Fasilitas istirahat di puncak</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp200.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -132,8 +153,15 @@
         <img src="../assets/slick4.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Splash Paradise Waterpark</h5>
-          <p class="card-text">Taman air yang menyenangkan dengan berbagai seluncuran, kolam renang, dan area bermain air untuk semua usia, menawarkan kesenangan dan kesegaran sepanjang hari.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses penuh ke semua wahana dan kolam renang</li>
+            <li>Penggunaan seluncuran dan area bermain air</li>
+            <li>Akses ke area istirahat dan tempat makan</li>
+            <li>Handuk dan locker (jika tersedia)</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp250.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -142,8 +170,15 @@
         <img src="../assets/slick5.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Campground</h5>
-          <p class="card-text">Nikmati petualangan di alam dengan camping di area perkemahan kami. Rasakan kehangatan api unggun, tidur di bawah bintang, dan jelajahi keindahan alam sekitar.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke area perkemahan</li>
+            <li>Sewa tenda (jika diperlukan)</li>
+            <li>Akses ke fasilitas api unggun </li>
+            <li>Area tidur dan akses ke fasilitas umum (toilet, air bersih)</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp300.000</span>/malam</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -152,8 +187,15 @@
         <img src="../assets/slick6.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Creative Canvas Studio</h5>
-          <p class="card-text">Ikuti workshop melukis dan ekspresikan kreativitas melalui berbagai teknik dan media seni, dengan bimbingan dari seniman berpengalaman.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke workshop melukis</li>
+            <li>Semua bahan dan perlengkapan melukis disediakan</li>
+            <li>Bimbingan langsung dari seniman</li>
+            <li>Karya seni hasil ciptaan peserta dibawa pulang</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp175.000</span>/sesi</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -162,8 +204,16 @@
         <img src="../assets/slick7.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Berry Delight Farm</h5>
-          <p class="card-text">Petik stroberi segar di kebun, nikmati produk olahan stroberi, dan rasakan suasana pedesaan yang menyegarkan.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke area petik stroberi</li>
+            <li>Keranjang untuk memetik stroberi</li>
+            <li>Produk olahan stroberi (selai, jus, dll.)</li>
+            <li>Area santai dan bersantai di kebun</li>
+          </ul>
+          <br>
+          <p class="card-price">Harga: <span class="price-value">Rp120.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -172,8 +222,14 @@
         <img src="../assets/slick8.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Luminous Lights Festival</h5>
-          <p class="card-text">Saksikan keajaiban malam dengan instalasi lampu yang memukau dan pertunjukan cahaya yang menciptakan suasana magis.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke festival lampu dan pertunjukan cahaya</li>
+            <li>Area foto dengan instalasi lampu</li>
+            <li>Fasilitas makan dan minum di lokasi (jika tersedia)</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp80.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -182,8 +238,15 @@
         <img src="../assets/slick9.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Heritage Village</h5>
-          <p class="card-text"> Masuki kehidupan tradisional di Heritage Village. Temui budaya lokal, dan rasakan suasana kampung adat yang kaya akan tradisi dan sejarah.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke Heritage Village</li>
+            <li>Tur dan informasi tentang budaya lokal</li>
+            <li>Pertunjukan budaya dan kerajinan tanganl</li>
+            <li>Fasilitas untuk belajar tentang sejarah dan tradisi lokal</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp130.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -192,8 +255,15 @@
         <img src="../assets/slick10.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Stellar Discovery Center</h5>
-          <p class="card-text">Jelajahi keajaiban alam semesta di Stellar Discovery Center. Amati bintang dan planet melalui teleskop canggih, dan ikuti sesi pendidikan astronomi yang mendalam.</p>
-          <a href="#" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke Stellar Discovery Center</li>
+            <li> Penggunaan teleskop dan fasilitas observasi</li>
+            <li>Sesi pendidikan astronomi dan informasi tentang bintang dan planet</li>
+            <li>Area edukasi dan interaktif</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp180.000</span>/orang</p> 
+          <a href="#" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -202,8 +272,15 @@
         <img src="../assets/slick11.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Creative Clay Studio</h5>
-          <p class="card-text">Temukan seni kerajinan tanah liat di Creative Clay Studio. Ikuti workshop pembuatan karya tanah liat, dari pot hingga patung, dan bawa pulang kreasi unik Anda.</p>
-          <a href="" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke workshop kerajinan tanah liat</li>
+            <li>Semua bahan dan perlengkapan disediakan</li>
+            <li>Bimbingan langsung dari pengrajin</li>
+            <li>Karya tanah liat hasil ciptaan peserta dibawa pulang</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp100.000</span>/sesi</p> 
+          <a href="" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -212,16 +289,20 @@
         <img src="../assets/slick12.png" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Aroma Bliss Studio</h5>
-          <p class="card-text">Ciptakan keseimbangan dan relaksasi di Aroma Bliss Studio. Pelajari cara membuat campuran minyak esensial dan nikmati pengalaman aromaterapi yang menyegarkan dan menenangkan.</p>
-          <a href="" class="btn btn-costum">Booking</a>
+          <ul>
+            <li>Akses ke sesi aromaterapi</li>
+            <li>Bahan-bahan untuk membuat campuran minyak esensial</li>
+            <li>Panduan dan bimbingan dalam pembuatan campuran minyak esensial</li>
+            <li>Pengalaman relaksasi aromaterapi</li>
+          </ul>
+          <p class="card-price">Harga: <span class="price-value">Rp140.000</span>/sesi</p> 
+          <a href="" class="btn btn-costum fw-bold">Booking Sekarang</a>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
   </div>
   </div>
-
-  
-</div>
     <!-- END CONTENT -->
 
   <!-- FOOTER -->
@@ -343,26 +424,24 @@
      <!-- END FOOTER -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- SCRIPT CAROUSEL VIDEO -->
     <script>
-      document.getElementById('videoPlaceholder').addEventListener('click', function() {
-        this.innerHTML = '<iframe src="https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1" id="youtubeVideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 550px;"></iframe>';
-      });
+      document.addEventListener('DOMContentLoaded', () => {
+  const playButton = document.getElementById('playButton');
+  const videoPlaceholder = document.getElementById('videoPlaceholder');
+  
+  const videoURL = 'https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1'; // Tambahkan autoplay=1 agar video langsung diputar
+  
+  playButton.addEventListener('click', () => {
+    // Ganti gambar dengan video
+    videoPlaceholder.innerHTML = `
+      <iframe width="100%" height="550" src="${videoURL}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    `;
+  });
+});
 
-    
-      document.getElementById('playButton').addEventListener('click', function() {
-          var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'), {
-            interval: false // Matikan otomatis slide
-          });
-          var videoPlaceholder = document.getElementById('videoPlaceholder');
-          videoPlaceholder.innerHTML = '<iframe id="youtubeVideo" src="https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 550px;"></iframe>';
-          carousel.pause(); // Pause carousel saat video diputar
-
-          var videoFrame = document.getElementById('youtubeVideo');
-          videoFrame.addEventListener('ended', function() {
-            carousel.cycle(); // Lanjutkan carousel setelah video selesai
-          });
-        });
-    </script>
+    </script>  
+    <!-- SCRIPT CAROUSEL VIDEO -->
 
     <!-- TOMBOL BOOKING -->
     <script>
