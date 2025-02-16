@@ -23,11 +23,8 @@ session_start();
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: #F8F8FF">
       <div class="container-fluid">
-<<<<<<< HEAD:about/index.php
         <a class="navbar-brand" href="#">
-=======
         <a class="navbar-brand" href="../index.html">
->>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:about/index.html
           <img src="../assets/logo.png" alt="Desa-Wisata-Pulesari" width="80px" height="30">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,11 +33,7 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav " style="font-family: Georgia, 'Times New Roman', Times, serif;">
             <li class="nav-item">
-<<<<<<< HEAD:about/index.php
               <a class="nav-link" aria-current="page" href="../index.php">Beranda</a>
-=======
-              <a class="nav-link" aria-current="page" href="../index.html">Beranda</a>
->>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:about/index.html
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="index.php">Tentang Kami</a>
@@ -56,15 +49,9 @@ session_start();
                 Other
               </a>
               <ul class="dropdown-menu">
-<<<<<<< HEAD:about/index.php
                 <li><a class="dropdown-item" href="../obyek-wisata/">Objek Wisata</a></li>
                 <li><a class="dropdown-item" href="../fasilitas/">Fasilitas</a></li>
                 <li><a class="dropdown-item" href="../gallery/">Galeri</a></li>
-=======
-              <li><a class="dropdown-item" href="../obyek-wisata/index.html">Objek Wisata</a></li>
-                <li><a class="dropdown-item" href="../fasilitas/index.html">Fasilitas</a></li>
-                <li><a class="dropdown-item" href="../gallery/index.html">Galeri</a></li>
->>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:about/index.html
               </ul>
             </li>
 

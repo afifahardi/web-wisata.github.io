@@ -67,7 +67,7 @@ session_start();
               <a class="nav-link" aria-current="page" href="../index.php">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index.php">Tentang Kami</a>
+              <a class="nav-link" href="../about/">Tentang Kami</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../index.php#paketWisata">Paket Wisata</a>
