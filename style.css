@@ -13,6 +13,7 @@
   width: 100%; /* Mengatur lebar gambar */
 }
 
+<<<<<<< HEAD
 .button-login{
   margin-left: 25rem;
 }
@@ -27,6 +28,13 @@
   object-fit: cover;
 }
 
+=======
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
+
+>>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67
 .play-button {
   position: absolute; 
   top: 50%; 
@@ -86,10 +94,13 @@
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transisi untuk perubahan */
   }
 
+<<<<<<< HEAD
   .tombol-login{
     background-color: #3CB371 !important; /* Warna latar belakang */
     color: white !important; /* Warna teks */
   }
+=======
+>>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67
 
   .card-price {
     font-family: 'Montserrat', sans-serif;

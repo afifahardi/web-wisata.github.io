@@ -1,9 +1,3 @@
-<?php
-include '../koneksi.php';
-session_start();
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,22 +6,14 @@ session_start();
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-      <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/business-frontpage.css" rel="stylesheet">
-    <title>TENTANG KAMI</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>BOOKING</title>
 </head>
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: #F8F8FF">
       <div class="container-fluid">
-<<<<<<< HEAD:about/index.php
-        <a class="navbar-brand" href="#">
-=======
         <a class="navbar-brand" href="../index.html">
->>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:about/index.html
           <img src="../assets/logo.png" alt="Desa-Wisata-Pulesari" width="80px" height="30">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,56 +22,34 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav " style="font-family: Georgia, 'Times New Roman', Times, serif;">
             <li class="nav-item">
-<<<<<<< HEAD:about/index.php
-              <a class="nav-link" aria-current="page" href="../index.php">Beranda</a>
-=======
               <a class="nav-link" aria-current="page" href="../index.html">Beranda</a>
->>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:about/index.html
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="index.php">Tentang Kami</a>
+              <a class="nav-link" href="../about/index.html">Tentang Kami</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index.php#paketWisata">Paket Wisata</a>
+              <a class="nav-link" href="../paket-wisata/index.html">Paket Wisata</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../history-pemesanan/">History Pemesanan</a>
+              <a class="nav-link active" href="../pemesanan/index.html">Pemesanan</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Other
               </a>
               <ul class="dropdown-menu">
-<<<<<<< HEAD:about/index.php
-                <li><a class="dropdown-item" href="../obyek-wisata/">Objek Wisata</a></li>
-                <li><a class="dropdown-item" href="../fasilitas/">Fasilitas</a></li>
-                <li><a class="dropdown-item" href="../gallery/">Galeri</a></li>
-=======
               <li><a class="dropdown-item" href="../obyek-wisata/index.html">Objek Wisata</a></li>
                 <li><a class="dropdown-item" href="../fasilitas/index.html">Fasilitas</a></li>
                 <li><a class="dropdown-item" href="../gallery/index.html">Galeri</a></li>
->>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:about/index.html
               </ul>
             </li>
-
-            <!-- TOMBOL LOGIN DAN LOGOUT -->
-            <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-              <!-- Jika sudah login -->
-              <li><a href="../logout/logout.php"  class="btn btn-lg button-login">Logout</a></li>
-            <?php else: ?>
-              <!-- Jika belum login -->
-              <li><a href="../login/login.php"  class="btn btn-lg button-login">Login</a></li>
-              <li><a href="../registrasi/registrasi.php" class="btn btn-lg button-regis">Register</a></li>
-            <?php endif; ?>
-           <!-- END TOMBOL LOGIN LOGOUT -->
-
           </ul>
         </div>
       </div>
     </nav>
   <!-- END NAVBAR -->
 
-  <!-- CAROUSEL -->
+<!-- CAROUSEL -->
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -123,91 +87,115 @@ session_start();
 </div>
 <!-- END CAROUSEL -->
 
- <!-- CONTENT -->
- <div class="container">
-
-  <div class="row">
-
-   <div class="aboutus-section">
-         <div class="container">
-             <div class="row" style="margin: 30px">
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                     <div class="aboutus">
-                         <h2 class="aboutus-title card-title fw-bold">Tentang Kami</h2> <br>
-                         <p class="aboutus-text">Di kaki perbukitan yang hijau dan diapit oleh aliran sungai yang jernih, terletak Desa Wisata Pulesari, sebuah surga tersembunyi yang menawarkan keindahan alam yang memukau dan kekayaan budaya yang mendalam. Desa Wisata Pulesari adalah destinasi wisata yang sempurna bagi Anda yang ingin merasakan kesejukan udara pegunungan, menjelajahi keindahan alam, serta mendalami kearifan lokal yang autentik.</p>
-                         <!-- <p class="aboutus-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem</p> -->
-                         <!-- <a class="aboutus-more" href="#">read more</a> -->
-                     </div>
-                 </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                     <div class="aboutus-banner">
-                         <img src="img/aboutus.jpg" alt="">
-                     </div>
-                 </div>
-                 <div class="col-md-5 col-sm-6 col-xs-12">
-                     <div class="feature">
-                         <div class="feature-box">
-                             <div class="clearfix">
-                                 <div class="iconset">
-                                     <span class="glyphicon glyphicon-cog icon"></span>
-                                 </div>
-                                 <div class="feature-content">
-                                     <h4 class="card-title fw-bold">Visi Kami</h4>
-                                     <p>Menciptakan sebuah wujud Desa Wisata Pulesari yang bersih, aman, nyaman, tentram, dinamis serta seni dan berbudaya religius yang berkualitas untuk menjadikan Desa Wisata Edukasi masyarakat tradisional.</p><br>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="feature-box">
-                             <div class="clearfix">
-                                 <div class="iconset">
-                                     <span class="glyphicon glyphicon-cog icon"></span>
-                                 </div>
-                                 <div class="feature-content">
-                                     <h4 class="card-title fw-bold">Misi Kami</h4>
-                                     <dl>
-                                      <dt>Melestarikan Keindahan Alam</dt>
-                                      <dd>Kami berkomitmen untuk menjaga dan melestarikan keindahan alam Desa Pulesari. Melalui program-program konservasi dan edukasi lingkungan, kami berusaha menjaga keseimbangan ekosistem alam desa kami.</dd>
-                                      <dt>Mempromosikan Budaya Lokal</dt>
-                                      <dd>Kami berupaya untuk memperkenalkan dan melestarikan budaya serta tradisi lokal. Melalui berbagai kegiatan dan acara, pengunjung dapat merasakan dan belajar tentang kehidupan sehari-hari, seni, dan adat istiadat masyarakat Pulesari.</dd>
-                                      <dt>Memberdayakan Masyarakat</dt>
-                                      <dd>Kami percaya bahwa pemberdayaan masyarakat lokal adalah kunci untuk pembangunan desa yang berkelanjutan. Melalui pelatihan dan dukungan, kami membantu warga desa untuk meningkatkan keterampilan mereka dan berpartisipasi aktif dalam industri pariwisata.</dd>
-                                     </dl>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="feature-box">
-                             <div class="clearfix">
-                                 <div class="iconset">
-                                     <span class="glyphicon glyphicon-cog icon"></span>
-                                 </div>
-                                 <div class="feature-content">
-                                     <h4 class="card-title fw-bold">Hubungi Kami</h4>
-                                     <p>Jika Anda memiliki pertanyaan atau ingin melakukan reservasi, jangan ragu untuk menghubungi kami melalui kontak berikut:</p>
-                                     <ul>
-                                      <li><strong>Telepon/WA:</strong> 0812-3456-7890</li>
-                                      <li><strong>Email:</strong> info@pulesari.com</li>
-                                      <li><strong>Alamat:</strong> Desa Pulesari Kecamatan Lemah Abang, Kabupaten Jonggol, Jawa Barat</li>
-                                     </ul>
-                                     <p>Atau atau melalui link <a href="https://tinyurl.com/bookingWisata">Kontak Kami</a> untuk informasi lebih lanjut.</p>
-                                     <p>Terima kasih telah memilih Desa Wisata Pulesari sebagai destinasi wisata Anda. Kami berharap dapat menyambut Anda di desa kami dan memberikan pengalaman yang tak terlupakan.</p>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
+<!-- CONTENT -->
+ <!-- Main Container -->
+  <!-- Formulir Pemesanan -->
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Pesan Paket Wisata</h1>
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Form Pemesanan</h2>
+        <p>Isi formulir di bawah ini untuk memesan paket wisata Anda</p><br>
+      </div>
+      <form id="bookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="destination" class="form-label">Pilih Destinasi</label>
+            <select id="destination" name="destination" class="form-select" required>
+              <option value="sungai">River Serenity Park</option>
+              <option value="taman-bunga">Bloom Haven Garden</option>
+              <option value="gunung">Summit Vista Peak</option>
+              <option value="Waterpark">Splash Paradise Waterpark</option>
+              <option value="Campground">Campground</option>
+              <option value="melukis">Creative Canvas Studio</option>
+              <option value="kebun">Berry Delight Farm</option>
+              <option value="festival">Luminous Lights Festival</option>
+              <option value="kampung">Heritage Village</option>
+              <option value="astronomy">Stellar Discovery Center</option>
+              <option value="clay">Creative Clay Studio</option>
+              <option value="parfume">Aroma Bliss Studio</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="date" class="form-label">Tanggal Perjalanan</label>
+            <input type="date" id="date" name="date" class="form-control" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="time" class="form-label">Waktu Perjalanan</label>
+            <input type="time" id="time" name="time" class="form-control" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="participants" class="form-label">Jumlah Peserta</label>
+            <input type="number" id="participants" name="participants" class="form-control" min="1" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="special-requests" class="form-label">Permintaan Khusus</label>
+            <textarea id="special-requests" name="special-requests" class="form-control" rows="4"></textarea>
+          </div>
+  
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Nama Kontak</label>
+            <input type="text" id="contact-name" name="contact-name" class="form-control" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email Kontak</label>
+            <input type="email" id="contact-email" name="contact-email" class="form-control" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="contact-phone" class="form-label">Telepon Kontak</label>
+            <input type="tel" id="contact-phone" name="contact-phone" class="form-control">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-custom w-100">Kirim Pemesanan</button>
+      </form>
+    </div>
   </div>
 
+  <!-- Informasi Pemesanan -->
+  <!-- Informasi Pemesanan, Kebijakan, dan Dukungan Pelanggan -->
+  <div class="row" style="margin-right: 0%;">
+    <div class="col-md-4 mb-4">
+      <div class="info-section p-4">
+        <h2 class="h5 mb-3">Informasi Pemesanan</h2>
+        <ul class="list-unstyled mb-0">
+          <li><strong>Langkah 1:</strong> Pilih destinasi dan paket wisata yang diinginkan.</li>
+          <li><strong>Langkah 2:</strong> Isi formulir dengan detail yang diperlukan.</li>
+          <li><strong>Langkah 3:</strong>  Klik "Kirim Pemesanan" untuk mengirim data ke WhatsApp admin.</li>
+          <li><strong>Langkah 4:</strong> Terima konfirmasi melalui WhatsApp atau email.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="info-section p-4">
+        <h2 class="h5 mb-3">Kebijakan Pembatalan</h2>
+        <p>Pembatalan dapat dilakukan hingga 48 jam sebelum jadwal tur dengan pengembalian dana penuh. Untuk informasi lebih lanjut, kunjungi <a href="#">kebijakan pembatalan</a>.</p>
+        
+        <h2 class="h5 mt-3 mb-3">Syarat dan Ketentuan</h2>
+        <p>Silakan baca syarat dan ketentuan kami untuk memahami peraturan yang berlaku untuk pemesanan.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-">
+      <div class="info-section p-4">
+        <h2 class="h5 mb-3">Butuh Bantuan?</h2>
+        <p>Hubungi tim layanan pelanggan kami di <a href="mailto:support@example.com">support@example.com</a> atau telepon <a href="tel:+621234567890">+62 123 4567 890</a> jika Anda memiliki pertanyaan atau memerlukan bantuan tambahan.</p>
+      </div>
+    </div>
   </div>
-
-
-
 </div>
+
   <!-- END CONTENT -->
-    
+
   <!-- FOOTER -->
-  <footer class="text-center text-lg-start text-dark"
+  <footer
+  class="text-center text-lg-start text-dark"
   style="background-color: #DCDCDC">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -324,6 +312,7 @@ session_start();
     </footer>
    <!-- END FOOTER -->
 
+
    <!-- SCRIPT CAROUSEL VIDEO -->
    <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -343,6 +332,41 @@ playButton.addEventListener('click', () => {
   </script>  
   <!-- SCRIPT CAROUSEL VIDEO -->
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <!-- Bootstrap JS and dependencies -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+     <!-- SCRIPT FORMULIR -->
+      <!-- JavaScript to handle form submission -->
+    <script>
+      document.getElementById('bookingForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          const destination = document.getElementById('destination').value;
+          const date = document.getElementById('date').value;
+          const time = document.getElementById('time').value;
+          const participants = document.getElementById('participants').value;
+          const specialRequests = document.getElementById('special-requests').value;
+          const contactName = document.getElementById('contact-name').value;
+          const contactEmail = document.getElementById('contact-email').value;
+          const contactPhone = document.getElementById('contact-phone').value;
+
+          const message = `Halo, saya ingin melakukan pemesanan paket wisata dengan rincian sebagai berikut:\n\n` +
+                          `*Destinasi:* ${destination}\n` +
+                          `*Tanggal Perjalanan:* ${date}\n` +
+                          `*Waktu Perjalanan:* ${time}\n` +
+                          `*Jumlah Peserta:* ${participants}\n` +
+                          `*Permintaan Khusus:* ${specialRequests ? specialRequests : 'Tidak ada'}\n\n` +
+                          `*Nama Kontak:* ${contactName}\n` +
+                          `*Email Kontak:* ${contactEmail}\n` +
+                          `*Telepon Kontak:* ${contactPhone ? contactPhone : 'Tidak ada'}\n\n` +
+                          `Terima kasih!`;
+
+          const whatsappUrl = `https://api.whatsapp.com/send?phone=+6281231236880&text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+      });
+  </script>
+  <!-- END SCRIPT FORMULIR -->
 </body>
 </html>

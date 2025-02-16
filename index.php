@@ -39,7 +39,11 @@ while ($row = mysqli_fetch_assoc($result)) {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav " style="font-family: Georgia, 'Times New Roman', Times, serif;">
             <li class="nav-item">
+<<<<<<< HEAD:index.php
               <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+=======
+              <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+>>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:index.html
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about/">Tentang Kami</a>
@@ -55,7 +59,11 @@ while ($row = mysqli_fetch_assoc($result)) {
                 Other
               </a>
               <ul class="dropdown-menu">
+<<<<<<< HEAD:index.php
                 <li><a class="dropdown-item" href="obyek-wisata/">Objek Wisata</a></li>
+=======
+              <li><a class="dropdown-item" href="obyek-wisata/">Objek Wisata</a></li>
+>>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:index.html
                 <li><a class="dropdown-item" href="fasilitas/">Fasilitas</a></li>
                 <li><a class="dropdown-item" href="gallery/">Galeri</a></li>
               </ul>
@@ -169,6 +177,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <!-- END COSTUM CAROUSEL -->
 
     <div class="text-center mt-5" style="text-align: center;">
+<<<<<<< HEAD:index.php
       
       <a href="obyek-wisata/index.php"  class="btn btn-lg mb-5 mt-0" style="background-color: #3CB371; color: #F8F8FF;">Lihat Destinasi Lainnya</a>
     </div>
@@ -208,6 +217,12 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
     <!-- END DAFTAR PAKET WISATA -->
 
+=======
+      <!-- <button type="button" class="btn  btn-lg" style="background-color: #3CB371; color: #F8F8FF;">Lihat Paket Wisata</button> -->
+      <a href="objek-wisata/index.html"  class="btn btn-lg mb-5 mt-0" style="background-color: #3CB371; color: #F8F8FF;">Lihat Destinasi Lainnya</a>
+    </div>
+
+>>>>>>> 32834e00b34cde8246a878ef18364a9682a63e67:index.html
       <!-- FOOTER -->
     <footer
       class="text-center text-lg-start text-dark"
