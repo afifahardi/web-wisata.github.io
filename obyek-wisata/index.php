@@ -1,3 +1,7 @@
+<?php
+include '../koneksi.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +16,8 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: #F8F8FF">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../assets/logo.png" alt="Desa-Wisata-Pulesari" width="130px" height="54">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/logo.png" alt="Desa-Wisata-Pulesari" width="80px" height="30">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -21,27 +25,39 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav " style="font-family: Georgia, 'Times New Roman', Times, serif;">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="../index.php">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about/index.html">About</a>
+              <a class="nav-link" href="../index.php">Tentang Kami</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../paket-wisata/index.html">Paket Wisata</a>
+              <a class="nav-link" href="../index.php#paketWisata">Paket Wisata</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pemesanan/index.html">Pemesanan</a>
+              <a class="nav-link" href="../history-pemesanan/">History Pemesanan</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Other
               </a>
               <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../obyek-wisata/index.html">Obyek Wisata</a></li>
-                <li><a class="dropdown-item" href="../fasilitas/index.html">Fasilitas</a></li>
-                <li><a class="dropdown-item" href="../gallery/index.html">Gallery</a></li>
+                <li><a class="dropdown-item active" href="index.php">Objek Wisata</a></li>
+                <li><a class="dropdown-item" href="../fasilitas/">Fasilitas</a></li>
+                <li><a class="dropdown-item" href="../gallery/">Galeri</a></li>
               </ul>
             </li>
+
+            <!-- TOMBOL LOGIN DAN LOGOUT -->
+            <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+              <!-- Jika sudah login -->
+              <li><a href="../logout/logout.php"  class="btn btn-lg button-login">Logout</a></li>
+            <?php else: ?>
+              <!-- Jika belum login -->
+              <li><a href="../login/login.php"  class="btn btn-lg button-login">Login</a></li>
+              <li><a href="../registrasi/registrasi.php" class="btn btn-lg button-regis">Register</a></li>
+            <?php endif; ?>
+           <!-- END TOMBOL LOGIN LOGOUT -->
+
           </ul>
         </div>
       </div>
@@ -49,7 +65,7 @@
   <!-- END NAVBAR -->
 
   <!-- CAROUSEL -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -57,13 +73,11 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-
         <div style="position: relative; cursor: pointer;" id="videoPlaceholder">
       <img src="https://images.unsplash.com/photo-1579804152190-ba7a74a8cc3c?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 img-fluid" alt="slide1"style="height: auto; max-height: 550px;">
-      <div class="play-button"> &#9658; </div>
+      <div class="play-button" id="playButton"> &#9658; </div>
       <div class="carousel-caption d-none d-md-block fixed">
     </div>
-
       </div>
     </div>
     <div class="carousel-item">
@@ -81,60 +95,147 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+  <!-- <div class="carousel-caption d-md-block">
+    <h1 class="fw-bold">SELAMAT DATANG DI DESA WISATA PULESARI!</h1>
+    <p>Edukasi dan Tradisi dalam Kedamaian Desa</p>
+  </div> -->
 </div>
 <!-- END CAROUSEL -->
 
     <!-- CONTENT -->
   <div class="container overflow-hidden text-center mt-5" >
     <div class="row">
-      <div class="col-12" >
-        <h3 style="text-align: center;"> OBYEK WISATA </h3>
+      <div class="col-11" >
+        <h3 style="text-align: center;"> OBJEK WISATA </h3>
       </div>
+  </div>
 
-    <div class="row gy-5">
-      <div class="col-9" >
-        <div class="p-3">
-          <div class="card" style="width: 40rem;">
-            <img src="/assets/content1.jpg" class="card-img-top" alt="obyek1">
-            <div class="card-body">
-                <h4>Taman</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
+  <div class="row ">
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata" id="card1">
+        <img src="../assets/slick1.png" class="card-img-top" alt="card1">
+        <div class="card-body">
+          <h5 class="card-title" id="booking1">River Serenity Park</h5>
+          <p class="card-text">Nikmati ketenangan dan keindahan sungai dengan aktivitas seperti berperahu, memancing, atau sekadar bersantai di tepiannya.</p>
+          
         </div>
       </div>
-      <div class="col-3" >
-        <div class="p-3">
-          <figure class="figure">
-            <iframe src="https://www.youtube.com/embed/tnjxdlcNgjc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="figure-img img-fluid rounded" alt="..."></iframe>
-          </figure>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick2.png" class="card-img-top" alt="card2">
+        <div class="card-body">
+          <h5 class="card-title">Bloom Haven Garden</h5>
+          <p class="card-text">Taman yang penuh warna dengan berbagai jenis bunga yang mekar sepanjang tahun, ideal untuk berjalan-jalan santai dan menikmati keindahan alam.</p>
+          
         </div>
       </div>
-      <div class="col-9 " >
-        <div class="p-3">
-            <div class="card" style="width: 40rem;">
-                <img src="https://desawisatapulesari.wordpress.com/wp-content/uploads/2012/06/5.jpg" class="card-img-top" alt="obyek1">
-                <div class="card-body">
-                    <h4>GOA</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick3.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Summit Vista Peak</h5>
+          <p class="card-text">Tempat puncak gunung yang menawarkan pemandangan spektakuler dan jalur pendakian yang menantang, memberikan pengalaman petualangan dan ketenangan di ketinggian.</p>
+          
         </div>
       </div>
-      <div class="col-9 " >
-        <div class="p-3">
-            <div class="card" style="width: 40rem;">
-                <img src="https://images.unsplash.com/photo-1707282399877-8d57c412c5c4?q=80&w=1589&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="obyek1">
-                <div class="card-body">
-                    <h4>KEBUN SALAK</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick4.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Splash Paradise Waterpark</h5>
+          <p class="card-text">Taman air yang menyenangkan dengan berbagai seluncuran, kolam renang, dan area bermain air untuk semua usia, menawarkan kesenangan dan kesegaran sepanjang hari.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick5.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Campground</h5>
+          <p class="card-text">Nikmati petualangan di alam dengan camping di area perkemahan kami. Rasakan kehangatan api unggun, tidur di bawah bintang, dan jelajahi keindahan alam sekitar.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick6.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Creative Canvas Studio</h5>
+          <p class="card-text">Ikuti workshop melukis dan ekspresikan kreativitas melalui berbagai teknik dan media seni, dengan bimbingan dari seniman berpengalaman.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick7.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Berry Delight Farm</h5>
+          <p class="card-text">Petik stroberi segar di kebun, nikmati produk olahan stroberi, dan rasakan suasana pedesaan yang menyegarkan.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick8.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Luminous Lights Festival</h5>
+          <p class="card-text">Saksikan keajaiban malam dengan instalasi lampu yang memukau dan pertunjukan cahaya yang menciptakan suasana magis.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick9.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Heritage Village</h5>
+          <p class="card-text"> Masuki kehidupan tradisional di Heritage Village. Temui budaya lokal, dan rasakan suasana kampung adat yang kaya akan tradisi dan sejarah.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick10.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Stellar Discovery Center</h5>
+          <p class="card-text">Jelajahi keajaiban alam semesta di Stellar Discovery Center. Amati bintang dan planet melalui teleskop canggih, dan ikuti sesi pendidikan astronomi yang mendalam.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick11.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Creative Clay Studio</h5>
+          <p class="card-text">Temukan seni kerajinan tanah liat di Creative Clay Studio. Ikuti workshop pembuatan karya tanah liat, dari pot hingga patung, dan bawa pulang kreasi unik Anda.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 g-4 mb-4 p-5">
+      <div class="card card-wisata">
+        <img src="../assets/slick12.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Aroma Bliss Studio</h5>
+          <p class="card-text">Ciptakan keseimbangan dan relaksasi di Aroma Bliss Studio. Pelajari cara membuat campuran minyak esensial dan nikmati pengalaman aromaterapi yang menyegarkan dan menenangkan.</p>
+         
         </div>
       </div>
     </div>
   </div>
   </div>
-  </div>
-  </div>
+
+  
+</div>
     <!-- END CONTENT -->
 
   <!-- FOOTER -->
@@ -257,24 +358,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
+    <!-- SCRIPT CAROUSEL VIDEO -->
     <script>
-      document.getElementById('videoPlaceholder').addEventListener('click', function() {
-        this.innerHTML = '<iframe src="https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1" id="youtubeVideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 550px;"></iframe>';
-      });
+      document.addEventListener('DOMContentLoaded', () => {
+  const playButton = document.getElementById('playButton');
+  const videoPlaceholder = document.getElementById('videoPlaceholder');
+  
+  const videoURL = 'https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1'; // Tambahkan autoplay=1 agar video langsung diputar
+  
+  playButton.addEventListener('click', () => {
+    // Ganti gambar dengan video
+    videoPlaceholder.innerHTML = `
+      <iframe width="100%" height="550" src="${videoURL}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    `;
+  });
+});
 
-      document.getElementById('playButton').addEventListener('click', function() {
-          var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'), {
-            interval: false // Matikan otomatis slide
-          });
-          var videoPlaceholder = document.getElementById('videoPlaceholder');
-          videoPlaceholder.innerHTML = '<iframe id="youtubeVideo" src="https://www.youtube.com/embed/tnjxdlcNgjc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 550px;"></iframe>';
-          carousel.pause(); // Pause carousel saat video diputar
-
-          var videoFrame = document.getElementById('youtubeVideo');
-          videoFrame.addEventListener('ended', function() {
-            carousel.cycle(); // Lanjutkan carousel setelah video selesai
-          });
-        });
-    </script>
+    </script>  
+    <!-- SCRIPT CAROUSEL VIDEO -->
 </body>
 </html>
