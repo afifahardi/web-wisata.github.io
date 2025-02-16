@@ -1,27 +1,50 @@
-Tugas User Interface Promosi Tempat Wisata
+# README
 
-Deskripsi Proyek:
-Proyek ini bertujuan untuk membuat sebuah website promosi untuk tempat wisata yang mencakup berbagai fitur untuk mempromosikan destinasi wisata secara efektif. Website ini akan menampilkan foto-foto kegiatan wisata, menu aplikasi, daftar paket wisata beserta gambar dan deskripsi, serta berbagai tampilan menarik lainnya.
+## Tugas User Interface Promosi Tempat Wisata
 
-Fitur Utama:
+### Deskripsi Proyek
+Proyek ini merupakan pengembangan website promosi tempat wisata yang dibuat menggunakan teknologi web standar seperti HTML, CSS, JavaScript, dan PHP. Tujuan dari proyek ini adalah memberikan pengalaman yang informatif dan interaktif kepada pengunjung dalam mengeksplorasi destinasi wisata.
 
-- Foto-Foto Kegiatan Wisata:
-Halaman ini akan menampilkan galeri foto yang menyoroti berbagai kegiatan yang dapat dilakukan di tempat wisata. Gambar-gambar ini akan memberikan pengunjung gambaran visual tentang pengalaman yang mereka bisa nikmati.
+### Teknologi yang Digunakan
+- **HTML** untuk struktur halaman
+- **CSS** (Bootstrap) untuk desain dan tata letak responsif
+- **JavaScript** untuk interaktivitas
+- **PHP** untuk pemrosesan data di sisi server
 
-- Menu Aplikasi:
-Menu navigasi yang intuitif untuk memudahkan pengunjung dalam menjelajahi berbagai halaman di website. Menu ini akan mencakup tautan ke halaman utama, galeri foto, daftar paket wisata, halaman booking, informasi kontak, dan fitur lainnya.
+### Fitur Utama
+1. **Galeri Foto Wisata**
+   - Menampilkan berbagai foto kegiatan wisata untuk memberikan gambaran visual kepada pengunjung.
 
-- Link Video:
-Terdapat link video yang akan diputar di carousel slide pertama. Video ini berisi informasi menarik atau promosi tentang tempat wisata yang dapat diakses.
+2. **Navigasi yang Intuitif**
+   - Menu utama mencakup tautan ke halaman utama, galeri, daftar paket wisata, halaman booking, dan kontak.
 
-- Daftar Paket Wisata:
-Halaman ini akan menampilkan berbagai paket wisata yang ditawarkan, lengkap dengan gambar dan deskripsi untuk masing-masing paket. Setiap paket akan diuraikan secara detail, mencakup harga, durasi, dan aktivitas yang termasuk.
+3. **Video Promosi**
+   - Video dapat diakses melalui carousel di halaman utama untuk memberikan informasi lebih lanjut tentang tempat wisata.
 
-- Halaman Booking:
-Halaman ini memungkinkan pengunjung untuk melakukan pemesanan paket wisata secara online. Formulir booking akan mencakup opsi pemilihan paket, tanggal kunjungan, jumlah peserta, dan informasi kontak. Fitur ini bertujuan untuk memudahkan pengunjung dalam merencanakan kunjungan mereka.
+4. **Daftar Paket Wisata**
+   - Menyediakan detail setiap paket wisata, termasuk gambar, harga, durasi, dan aktivitas yang ditawarkan.
 
--Tampilan dan Desain:
-Website ini akan dirancang dengan tata letak yang bersih dan menarik, menggunakan Bootstrap untuk styling. Desain akan memastikan pengalaman pengguna yang nyaman dan responsif di berbagai perangkat.
+5. **Halaman Pemesanan (Booking)**
+   - Formulir pemesanan yang memungkinkan pengunjung memilih paket wisata dan mengisi informasi yang diperlukan.
 
-### Catatan Tambahan:
-Link video yang terdapat di carousel slide pertama akan memberikan pengunjung tampilan yang lebih interaktif dan informatif mengenai tempat wisata. Pastikan untuk mengecek dan memastikan video tersebut dapat diputar dengan baik di website.
+### Keamanan dan Integritas Kode
+Kode dalam proyek ini dirancang untuk digunakan dalam konteks promosi tempat wisata dan tidak mengandung fitur eksploitasi, hacking, atau aktivitas ilegal. Jika ada deteksi dari GitHub terkait keamanan, silakan periksa kembali kode dan pastikan tidak ada penggunaan fungsi berisiko seperti `eval()`, `exec()`, atau akses ke sistem yang tidak diperlukan.
+
+### Cara Menjalankan Proyek
+1. Clone repository ini menggunakan perintah:
+   ```bash
+   git clone https://github.com/afifahardi/web-wisata.github.io.git
+   ```
+2. Jalankan server lokal dengan XAMPP atau aplikasi serupa.
+3. Pastikan semua file tersedia dalam direktori `htdocs`.
+4. Akses website melalui browser dengan URL `http://localhost/nama-folder-proyek/`
+
+### Catatan Tambahan
+- Pastikan video di carousel dapat diputar dengan baik.
+- Jika terdapat peringatan keamanan dari GitHub, silakan periksa kode dan pastikan tidak ada skrip yang dianggap berisiko.
+- Jika menggunakan fitur dinamis, periksa kembali sanitasi input untuk mencegah serangan seperti SQL Injection atau XSS.
+
+---
+
+Dokumentasi ini dibuat untuk memastikan proyek tetap berjalan dengan baik dan dapat digunakan tanpa kendala teknis atau peringatan keamanan dari GitHub.
+
